@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('atasan_langsung', function (Blueprint $table) {
             $table->id();
+            $table->string('nip')->unique();
+            $table->string('nama_lengkap')->nullable();
+            $table->string('username')->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }
